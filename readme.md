@@ -18,6 +18,6 @@ Main font seems to be *Proxima Nova*, however isn't a free font. close alternati
 
 ---
 
-##Pending Items
+## Pending Items
 - Popup Show/Hide Animation (+ its responsive)
 

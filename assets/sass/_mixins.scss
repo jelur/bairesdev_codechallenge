@@ -1,0 +1,49 @@
+// SASS Mixins
+
+// Mixins
+@mixin size-push-full() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@mixin flex-center-contents() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin stepper-item-decors() {
+	&::before {
+		content: "";
+		background-color: $c-stepper-base;
+		width: 2px;
+		position: absolute;
+		height: 100%;
+		left: ($m-stepper-iconsize / 2) - 1px;
+		z-index: 1;
+	}
+	&::before { top: -50%; }
+	&:first-child::before {display: none}
+
+	&.process-done::before {
+		background-color: $c-stepper-success;
+	}
+}
+
+@mixin stepper-icon-done() {
+	&.process-done .step--icon {
+		position: relative;
+		color: #fff;
+		background-color: #fff;
+
+		&::before {
+			content: "";
+			@include size-push-full;
+
+			background: transparent url('../img/icon-check-green.svg') center center no-repeat;
+		}		
+	}
+}
+

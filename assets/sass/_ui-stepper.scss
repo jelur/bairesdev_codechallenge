@@ -1,0 +1,93 @@
+// UI Component: Stepper
+
+.step {
+  &per--wrapper {
+    display: flex;
+    flex-direction: column; 
+    align-content: center;   
+  }
+  &--icon {
+    width: $m-stepper-iconsize;
+    height: $m-stepper-iconsize;
+    background-color: $c-stepper-base;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: #fff;
+    line-height: $m-stepper-iconsize - ($m-stepper-iconborder * 2);
+    border-radius: $m-stepper-iconsize / 2;
+    border: 4px solid #fff;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+  &--item {
+    @include stepper-item-decors();
+    @include stepper-icon-done();
+
+    position: relative;
+    text-align: center;
+    color: #666;
+    font-size: 0.7rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+  &--title {
+    color: #595959;
+    font-size: 1em;
+    flex-grow: 3;
+    text-align: left;
+  }
+  &--note {
+    text-align: right;
+    font-family: $f-light;
+    color: #666;
+  }
+  &--date {
+    display: block;
+    color: #000;
+    margin-top: 0.35em;
+    font-family: 0.9em;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .step {
+    &per--wrapper {
+      flex-direction: row;
+      // justify-content: space-between;
+      align-content: stretch;
+    }
+    &--icon {
+      margin-right: 0;
+      margin-bottom: 0.75rem;
+    }
+    &--item {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      flex-grow: 1;
+      padding: 0;
+      min-width: 90px;
+
+      &::before {
+        width: 100%;
+        height: 2px;
+        top: $m-stepper-iconsize / 2;
+        left: -50%;
+      }
+    }
+    &--title {
+      text-align: center;
+      margin-bottom: 0.8em;
+    }
+    &--note {
+      text-align: center;
+      min-width: 75px;
+    }
+  }
+}

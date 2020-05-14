@@ -1,0 +1,39 @@
+// UI Element: Button;
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 0.25rem;
+  border: 1px solid $c-border;
+  background-color: #fff;
+  color: $c-accent;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 4px rgba(200,200,200,0.2);
+    
+  &:hover {
+    cursor: pointer;
+    background-color: darken(#fff,5%);
+  }
+  
+  &.default {
+    background-color: $c-accent;
+    color: #fff;
+    border-color: $c-accent;
+    box-shadow: 0 4px 6px rgba($c-accent,0.2);
+    
+    &:hover {
+      background: darken($c-accent,5%);
+    }
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  
+  + .button {
+    margin-left: 0.7rem;
+  }
+}

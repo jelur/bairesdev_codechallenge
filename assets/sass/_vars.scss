@@ -1,0 +1,23 @@
+// SASS Vars
+// Prefix indicate variable nature:
+// c: Color
+// g: gradient
+// m: metric
+// f: font
+
+$c-accent: #0768fd;
+$c-border: #d9d9d9;
+$c-error: #e20000;
+$c-done: #01c221;
+$c-stepper-base: #b5b5b5;
+$c-stepper-success: #4dc754;
+$g-decor: linear-gradient(to right, #250056, #0076ae);
+
+
+$m-radius: 0.25rem;
+$m-stepper-iconborder: 4px;
+$m-stepper-iconsize: 24px + ($m-stepper-iconborder * 2);
+
+$f-regular: "Proxima Nova", Lato, sans-serif;
+$f-bold: "proxima_nova_ltsemibold", Lato, sans-serif;
+$f-light: "proxima_nova_ltthin", Lato, sans-serif;

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IQVIA Apollo Gemini Front End Developer UI Code Challenge</title>
+    <meta name="author" content="Jesus Lugo">
+    <link rel="stylesheet" href="build/fonts/fonts.min.css">
+    <link rel="stylesheet" href="build/css/app.min.css">
+</head>
+
+<body>
+  <div class="trigger--holder">
+    <a class="button default action-show-popup" data-popupid="popupEngagementProcess">Show Popup</a>
+  </div>
+  <div class="popup--wrapper" id="popupEngagementProcess">
+      <div class="popup--box">
+          <header class="popup--header">
+              <h2>Engagement Process <span class="tag error">Abandoned</span></h2>
+              <p>2019 Fall Oncology Advisory Board</p>
+          </header>
+          <div class="popup--content">
+            <div id="stepperComponent" class="stepper--wrapper"></div>
+          </div>
+          <footer class="popup--actions">
+              <a class="button action-hide-popup" data-popupid="popupEngagementProcess">Reinstate</a>
+              <a class="button default action-hide-popup" data-popupid="popupEngagementProcess">Draft revisions</a>
+              <a class="popup--close action-hide-popup" title="Close dialog" aria-label="Close Dialog" data-popupid="popupEngagementProcess">&times;</a>
+          </footer>
+      </div>
+    </div>
+    <script src="build/js/app.min.js"></script>
+</body>
+
+</html>

@@ -4,6 +4,12 @@ Author: Jesus Lugo (@jelur)
 
 ---
 
+## Notes
+- Building tool (codekit) was set to use _autoprefixer_.
+- HTML5 **Dialog** wasn't used for the popup, because it still short on browser compatibility.
+
+---
+
 ## Tooling
 - Sublime Text
 - CodeKit

@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "32137",
 "files": {
+	"/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitattributes",
+		"oF": 0
+		},
 	"/assets/js/app.js": {
 		"bF": 0,
 		"ft": 64,
@@ -99,7 +107,7 @@
 		"sct": 0
 		},
 	"/assets/sass/app.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
@@ -427,11 +435,11 @@
 		"oAP": "/build/fonts/Mark Simonson - Proxima Nova Thin-webfont.woff2",
 		"oF": 0
 		},
-	"/build/img/check-green.svg": {
+	"/build/img/icon-check-green.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/build/img/check-green.svg",
+		"oAP": "/build/img/icon-check-green.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,

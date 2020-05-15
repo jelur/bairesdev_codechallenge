@@ -8,13 +8,15 @@
   &::before { // Overlay
     @include size-push-full;
     content: "";
-    background-color: #000;
-    opacity: 0.57;
+    background-color: $c-popup-overlay-bg;
+    opacity: $m-popup-overlay-opacity;
     z-index: -1;
+    transition: opacity $m-popup-overlay-timing linear;
   }
 
   &.active {
     display: flex;
+    z-index: 100;
   }
 }
 
@@ -24,7 +26,7 @@
     border: 1px solid $c-border;
     padding: 1.875rem 1.56rem 1.56rem; 
     position: relative;
-    border-radius: 4px;
+    border-radius: $m-border-radius;
     border-top: 0 none;
 
     &::before {
@@ -36,8 +38,8 @@
       height: 4px;
       background-color: #0076ae;
       background-image: $g-decor;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
+      border-top-left-radius: $m-border-radius;
+      border-top-right-radius: $m-border-radius;
     }
   }
   &--header {
@@ -85,7 +87,7 @@
   font-size: 0.625rem;
   display: inline-block;
   padding: 0 0.5rem;
-  border-radius: $m-radius / 2;
+  border-radius: $m-border-radius / 2;
   background-color: #ddd;
   vertical-align: top;
   margin-left: 0.7ex;
@@ -112,3 +114,60 @@
     }
   }
 }
+
+// Animations
+@keyframes anim-overlay-show {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  1% {
+    opacity: 0.01;
+    display: block;
+  }
+
+  100% { opacity: $m-popup-overlay-opacity }
+}
+
+@keyframes anim-popup-show {
+  0% {
+    // this status until 15% generates the pause so the overlay gets rendered
+    opacity: 0;
+    display: none;
+  }
+
+  15% {
+    opacity: 0.1;
+    scale: 0.1;
+    transform: translate(0,-1000vh);
+    display: block;
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate(0,0);
+    scale: 0.1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.popup--wrapper {
+  &.active {
+    &::before {
+      will-change: opacity;
+      animation: anim-overlay-show $m-popup-overlay-timing both; 
+    }
+
+    .popup--box {
+      will-change: all;
+      animation: anim-popup-show $m-popup-overlay-timing * 2 ease-in-out; 
+    }
+  }
+}
+
+
+

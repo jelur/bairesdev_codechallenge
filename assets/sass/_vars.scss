@@ -11,10 +11,12 @@ $c-error: #e20000;
 $c-done: #01c221;
 $c-stepper-base: #b5b5b5;
 $c-stepper-success: #4dc754;
+$c-popup-overlay-bg: #000;
 $g-decor: linear-gradient(to right, #250056, #0076ae);
 
-
-$m-radius: 0.25rem;
+$m-popup-overlay-opacity: 0.57;
+$m-popup-overlay-timing: 0.5s;
+$m-border-radius: 0.25rem;
 $m-stepper-iconborder: 4px;
 $m-stepper-iconsize: 24px + ($m-stepper-iconborder * 2);
 

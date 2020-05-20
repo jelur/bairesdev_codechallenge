@@ -16,7 +16,6 @@ Author: Jesus Lugo (@jelur)
 - CodeKit
 - Firefox for Developers
 
-
 ---
 
 ## About Fonts
